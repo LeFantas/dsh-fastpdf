@@ -1,0 +1,5 @@
+# dsh-fastpdf bundle patch：把自己挂进 loader 树。
+# id 稳定身份；profile 用户层可用同 id 做定向覆盖（不要再 insert 同 id，会 duplicate loader entry id）。
+- insert:
+    - id: dsh-fastpdf
+      name: 'dsh-fastpdf'

@@ -1,0 +1,30 @@
+{
+  "name": "dsh-fastpdf",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "DSH 侧边栏 PDF 预览的轻量替代实现：798KB pdf.js + 独立 worker + 视口懒渲染",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-api-workspace-files",
+        "@deepseek-ai/dsh-client-ui-sidebar-documentpreview",
+        "@deepseek-ai/dsh-client-ui-sidebar-right"
+      ]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeFantas/dsh-fastpdf.git"
+  }
+}
