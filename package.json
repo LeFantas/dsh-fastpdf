@@ -10,6 +10,15 @@
     "./client": "./lib/client.js",
     "./package.json": "./package.json"
   },
+  "files": [
+    "lib",
+    "vendor",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "scripts": {
+    "dist": "node dist-dsh-fastpdf.mjs"
+  },
   "dsh": {
     "bundle": {
       "patch": "./cordis.patch.yml"
